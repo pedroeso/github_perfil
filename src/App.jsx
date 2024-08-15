@@ -9,7 +9,13 @@ function App() {
   const [nomeUsuario, setNomeUsuario] = useState('');
   return(
     <>
-    <input type="text" onBlur={(e) => setNomeUsuario(e.target.value)} />
+      <div className="container mt-3">
+        <input
+          type="text"
+          className="form-control mb-3" 
+          placeholder="Digite seu nome do seu Github"
+          onBlur={(e) => setNomeUsuario(e.target.value)}
+        />
 
     {nomeUsuario.length > 4 && (
       <>
@@ -25,6 +31,7 @@ function App() {
     <button onClick={() => setFormularioEstaVisivel(!formularioEstaVisivel)} type="button">
     toggle form
     </button> */}
+    </div>
     </>
   )
 }
